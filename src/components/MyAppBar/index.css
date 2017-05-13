@@ -1,0 +1,7 @@
+.appBar{
+  position: fixed !important;
+}
+
+.appBar > h1 {
+  font-weight: 400 !important;
+}
