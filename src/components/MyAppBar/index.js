@@ -7,6 +7,8 @@ import IconButton from 'material-ui/IconButton';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 
+import {cyan500} from 'material-ui/styles/colors';
+
 import "./index.css";
 
 class MyAppBar extends Component{
@@ -28,6 +30,7 @@ class MyAppBar extends Component{
     return (
       <div>
         <Drawer docked={false} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
+            <div style={{height: "64px", backgroundColor: cyan500}} />
             <MenuItem onTouchTap={() => this.go("/apropos")}>À Propos</MenuItem>
         </Drawer>
         <AppBar
