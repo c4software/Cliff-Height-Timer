@@ -13,14 +13,18 @@ class MyAppBar extends Component{
   constructor(props) {
       super(props);
       this.state = {open: false};
-  }
+  };
 
   handleToggle = () => {
       this.setState({open: !this.state.open});
   };
 
+  go = (action) => {
+      location.hash = action;
+      this.setState({open: false});
+  };
+
   render(){
-    iconElementLeft = <IconButton onTouchTap={this.handleToggle}><Menu /></IconButton>;
     return (
       <div>
         <Drawer docked={false} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
@@ -29,7 +33,9 @@ class MyAppBar extends Component{
         <AppBar
             className="appBar"
             title="Cliff Height Timer"
-            iconElementLeft={iconElementLeft}
+            onTitleTouchTap={() => this.go("/")}
+            onLeftIconButtonTouchTap={this.handleToggle}
+            iconElementLeft={<IconButton><Menu /></IconButton>}
         />
       </div>
     )
