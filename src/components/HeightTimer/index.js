@@ -5,7 +5,12 @@ import RaisedButton from 'material-ui/RaisedButton';
 class HeightTimer extends Component{
   constructor(props){
     super(props);
-    this.state = {running: false, time: 0, m: "0 m", ft: "0 ft"};
+    this.state = {
+      running: false,
+      time: 0,
+      m: "0 m",
+      ft: "0 ft"
+    };
   }
 
   start = () => {
@@ -13,6 +18,14 @@ class HeightTimer extends Component{
         start: new Date().getTime(),
         running: !this.state.running
       });
+
+      if (!this.state.running){
+        this.timerId = setInterval(() => {
+          this.compute();
+        }, 10);
+      }else{
+        clearInterval(this.timerId);
+      }
   };
 
   compute = () => {
