@@ -10,9 +10,11 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 const routes = (
 	<Router>
 		<MuiThemeProvider>
-			<div>
+			<div className='h100'>
 					<MyAppBar />
-					<Route exact path="/" component={Home} />
+					<div className="h100 container">
+						<Route exact path="/" component={Home} />
+					</div>
 			</div>
 		</MuiThemeProvider>
 	</Router>
