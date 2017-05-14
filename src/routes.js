@@ -1,10 +1,11 @@
 import React from 'react';
 import {HashRouter as Router,  Route} from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Home from './views/home';
-import MyAppBar from "./components/MyAppBar";
+import About from './views/home';
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MyAppBar from "./components/MyAppBar";
 
 // Route de l’application
 const routes = (
@@ -14,6 +15,7 @@ const routes = (
 					<MyAppBar />
 					<div className="h100 container">
 						<Route exact path="/" component={Home} />
+						<Route exact path="/about" component={About} />
 					</div>
 			</div>
 		</MuiThemeProvider>

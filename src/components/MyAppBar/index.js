@@ -31,7 +31,7 @@ class MyAppBar extends Component{
       <div>
         <Drawer docked={false} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
             <div style={{height: "64px", backgroundColor: cyan500}} />
-            <MenuItem onTouchTap={() => this.go("/apropos")}>À Propos</MenuItem>
+            <MenuItem onTouchTap={() => this.go("/about")}>About</MenuItem>
         </Drawer>
         <AppBar
             className="appBar"
