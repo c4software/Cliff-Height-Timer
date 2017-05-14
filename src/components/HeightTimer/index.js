@@ -15,7 +15,7 @@ class HeightTimer extends Component{
   render(){
     return (
       <div>
-        <RaisedButton secondary={this.state.running} onTouchTap={this.start} label={this.state.running?"Stop":"Start"} />
+        <RaisedButton fullWidth={true} secondary={this.state.running} onTouchTap={this.start} label={this.state.running?"Stop":"Start"} />
       </div>
     )
   }
