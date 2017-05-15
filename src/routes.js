@@ -3,7 +3,7 @@ import {HashRouter as Router,  Route} from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Home from './views/home';
-import About from './views/home';
+import About from './views/about';
 
 import MyAppBar from "./components/MyAppBar";
 
