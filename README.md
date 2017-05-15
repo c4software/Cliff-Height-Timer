@@ -1,10 +1,4 @@
-# React-minimal-example 
-
-React Minimal Example. Implements :
-
-- Simple Components.
-- Minimalist react-redux.
-- Simple react-router usage.
+# Cliff-Height-Timer 
 
 ## Install (can take a while)
 
