@@ -5,7 +5,7 @@ import HeightTimer from "../../components/HeightTimer";
 class Home extends Component {
   render() {
     return (
-      <div className="text-center">
+      <div className="h100 text-center">
         <HeightTimer />
       </div>
     );

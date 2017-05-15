@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
+import "./index.css";
 
-import RaisedButton from 'material-ui/RaisedButton';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
+import Stop from 'material-ui/svg-icons/av/stop';
 
 class HeightTimer extends Component{
   constructor(props){
@@ -31,9 +34,9 @@ class HeightTimer extends Component{
   compute = () => {
       let fallTime = new Date().getTime() - this.state.start;
   		let height = 16*Math.pow((fallTime/1000), 2);
-      let numberDigits = 0;
+      let numberDigits = 1;
 			if(height < 1){
-				numberDigits = 1;
+				numberDigits = 2;
 			}
 
       let fallTimeFormated = (fallTime/1000).toFixed(2)+"s";
@@ -49,11 +52,13 @@ class HeightTimer extends Component{
 
   render(){
     return (
-      <div>
+      <div style={{paddingTop: "30px"}}>
         <h1>{this.state.time}</h1>
         <h3>{this.state.m}</h3>
         <h3>{this.state.ft}</h3>
-        <RaisedButton fullWidth={true} secondary={this.state.running} onTouchTap={this.start} label={this.state.running?"Stop":"Start"} />
+        <FloatingActionButton className="fab" secondary={this.state.running} onTouchTap={this.start}>
+          {this.state.running?<Stop />:<PlayArrow />}
+        </FloatingActionButton>
       </div>
     )
   }

@@ -6,6 +6,18 @@ body, html, #root {
   height: 100%;
 }
 
+h1{
+  font-size: 3.2em;
+}
+
+h3{
+  font-size: 2.2em;
+}
+
+h1,h2,h3,h4,h5{
+  font-weight: 300;
+}
+
 div[data-reactroot]{
   height: 100%;
 }
@@ -22,4 +34,10 @@ div[data-reactroot]{
 
 .text-center{
   text-align: center;
+}
+
+.middle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
