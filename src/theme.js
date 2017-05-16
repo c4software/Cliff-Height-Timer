@@ -1,9 +1,9 @@
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {blue500} from "material-ui/styles/colors"
+import {deepPurple500} from "material-ui/styles/colors"
 
 const theme = getMuiTheme({
     palette: {
-        primary1Color: blue500
+        primary1Color: deepPurple500
     }
 });
 
