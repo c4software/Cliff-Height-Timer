@@ -7,10 +7,12 @@ import About from './views/about';
 
 import MyAppBar from "./components/MyAppBar";
 
+import theme from "./theme";
+
 // Route de l’application
 const routes = (
 	<Router>
-		<MuiThemeProvider>
+		<MuiThemeProvider muiTheme={theme}>
 			<div className='h100'>
 					<MyAppBar />
 					<div className="h100 container">
