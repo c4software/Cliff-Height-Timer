@@ -11,8 +11,8 @@ class HeightTimer extends Component{
     this.state = {
       running: false,
       time: 0,
-      m: "0 m",
-      ft: "0 ft"
+      m: "0",
+      ft: "0"
     };
   }
 
@@ -39,9 +39,9 @@ class HeightTimer extends Component{
 				numberDigits = 2;
 			}
 
-      let fallTimeFormated = (fallTime/1000).toFixed(2)+"s";
-      let feetFormated = height.toFixed(numberDigits)+" ft";
-      let meterFormated = (height/3.2808).toFixed(numberDigits)+" m";
+      let fallTimeFormated = (fallTime/1000).toFixed(2);
+      let feetFormated = height.toFixed(numberDigits);
+      let meterFormated = (height/3.2808).toFixed(numberDigits);
 
       this.setState({
         time: fallTimeFormated,
@@ -53,9 +53,9 @@ class HeightTimer extends Component{
   render(){
     return (
       <div style={{paddingTop: "30px"}}>
-        <h1>{this.state.time}</h1>
-        <h3>{this.state.m}</h3>
-        <h3>{this.state.ft}</h3>
+        <h1>{this.state.time} s</h1>
+        <h3>{this.state.m} m</h3>
+        <h3>{this.state.ft} ft</h3>
         <FloatingActionButton className="fab" secondary={this.state.running} onTouchTap={this.start}>
           {this.state.running?<Stop />:<PlayArrow />}
         </FloatingActionButton>
