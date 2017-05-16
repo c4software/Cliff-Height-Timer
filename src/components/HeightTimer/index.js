@@ -5,6 +5,8 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
 import Stop from 'material-ui/svg-icons/av/stop';
 
+import {red500, teal500} from "material-ui/styles/colors"
+
 class HeightTimer extends Component{
   constructor(props){
     super(props);
@@ -56,7 +58,7 @@ class HeightTimer extends Component{
         <h1>{this.state.time} s</h1>
         <h3>{this.state.m} m</h3>
         <h3>{this.state.ft} ft</h3>
-        <FloatingActionButton className="fab" secondary={this.state.running} onTouchTap={this.start}>
+        <FloatingActionButton className="fab" backgroundColor={this.state.running?red500:teal500} onTouchTap={this.start}>
           {this.state.running?<Stop />:<PlayArrow />}
         </FloatingActionButton>
       </div>
