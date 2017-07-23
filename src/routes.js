@@ -1,12 +1,10 @@
-import React from 'react';
-import {HashRouter as Router,  Route} from 'react-router-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {Route, HashRouter as Router} from 'react-router-dom';
 
-import Home from './views/home';
 import About from './views/about';
-
+import Home from './views/home';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import MyAppBar from "./components/MyAppBar";
-
+import React from 'react';
 import theme from "./theme";
 
 // Route de l’application
